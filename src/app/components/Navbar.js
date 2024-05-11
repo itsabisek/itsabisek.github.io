@@ -31,7 +31,7 @@ const Navbar = () => {
     ]
 
     return (<div>
-        <nav className="bg-primaryBg">
+        <nav>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
@@ -54,7 +54,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-            <div className="bottom-0 left-0 right-0 bg-[#d4c2ac] h-0.5 transition-all duration-300 overflow-hidden"></div>
+            <div className="bottom-0 left-0 right-0 bg-accentBg h-0.5 transition-all duration-300 overflow-hidden"></div>
         </nav>
     </div>);
 

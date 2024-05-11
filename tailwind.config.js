@@ -15,7 +15,11 @@ module.exports = {
     },
     colors: {
       'primaryBg': '#F3F2EE',
-      'secondaryBg': '#ED6E2D'
+      'secondaryBg': '#ED6E2D',
+      'accentBg': '#d4c2ac'
+    },
+    fontFamily: {
+      hack: ["Hack"]
     }
   },
   plugins: [],

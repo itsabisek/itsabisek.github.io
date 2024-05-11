@@ -4,8 +4,9 @@ import Story from "./components/Story";
 
 export default function Home() {
   return (
-    <body className="bg-primaryBg">
+    <div className="bg-primaryBg min-h-screen flex flex-col font-hack font-bold">
       <Navbar />
-    </body>
+      <Story />
+    </div>
   );
 }
