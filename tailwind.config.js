@@ -14,13 +14,16 @@ module.exports = {
       },
     },
     colors: {
-      'primaryBg': '#F3F2EE',
-      'secondaryBg': '#ED6E2D',
-      'accentBg': '#d4c2ac'
+      'primaryBg': '#c5d8d1',
+      'secondaryBg': '#f45b69',
+      'accentBg': '#ffcb77'
     },
     fontFamily: {
       hack: ["Hack"]
-    }
+    },
+    transitionProperty: {
+      height: 'height'
+  }
   },
   plugins: [],
 };

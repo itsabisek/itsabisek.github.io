@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,49 +12,48 @@ const Navbar = () => {
     const links = [
         {
             id: 1,
-            link: "Home"
-        },
-        {
-            id: 2,
             link: "About"
         },
         {
-            id: 3,
+            id: 2,
             link: "Work"
         },
         {
-            id: 4,
+            id: 3,
             link: "Skills"
+        },
+        {
+            id: 4,
+            link: "Contact"
         },
     ]
 
-    return (<div>
-        <nav>
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-20">
+    return (
+        <nav className="fixed top-0 left-0 w-full shadow-md bg-primaryBg">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+                <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
-                        <a href="/" className="text-white">
+                        <a href="/" className="font-bold text-2xl">
                             ABISEK
                         </a>
                     </div>
-                    <ul className="hidden md:flex h-full">
+                    <div className="grid grid-cols-5 justify-between h-full">
                         {links.map(({ id, link }) => (
-                            <li key={id}>
-                                <div className="group relative flex items-center h-full space-x-1">
-                                    <a href="/" className="text-white group-hover:text-secondaryBg p-2">
-                                        {link}
-                                    </a>
-                                    <div className="absolute bottom-0 left-0 right-0 bg-secondaryBg h-0 transition-all duration-300 overflow-hidden group-hover:h-0.5"></div>
-                                </div>
-                            </li>
+                            <div className="group cursor-pointer relative flex justify-center items-center">
+                                <Link href={`#${link}`} className="group-hover:text-secondaryBg p-1">{link}</Link>
+
+                                <div className="absolute h-0 bottom-0 left-0 right-0 bg-secondaryBg transition-all duration-500 overflow-hidden group-hover:h-0.5"></div>
+                            </div>
                         ))}
 
-                    </ul>
+                    <div className="flex cursor-pointer justify-center items-center border-secondaryBg border-2 text-secondaryBg hover:text-primaryBg duration-500 hover:bg-secondaryBg transition ease-in-out rounded-full p-2 my-3 mx-1 text-sm">
+                        <a target="_blank" href="../../../cv/Abisek-Mishra-Resume-Software-Developer.pdf">Download CV</a>
+                    </div>
+
+                    </div>
                 </div>
             </div>
-            <div className="bottom-0 left-0 right-0 bg-accentBg h-0.5 transition-all duration-300 overflow-hidden"></div>
-        </nav>
-    </div>);
+        </nav>);
 
 };
 

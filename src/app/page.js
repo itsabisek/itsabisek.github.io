@@ -1,12 +1,24 @@
-import Image from "next/image";
+"use client";
+
 import Navbar from "./components/Navbar";
 import Story from "./components/Story";
+import AboutMe from "./components/AboutMe";
+import Work from "./components/Work";
+import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 
 export default function Home() {
   return (
-    <div className="bg-primaryBg min-h-screen flex flex-col font-hack font-bold">
+    <div className="bg-primaryBg font-sans">
       <Navbar />
-      <Story />
+      <div className="min-h-screen flex flex-col flex-grow">
+        <Story />
+        <AboutMe />
+        <Work />
+        <Skills />
+        <Contact />
     </div>
+    </div>
+
   );
 }
