@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/itsabisek.github.io/static/css/main.65ec5e80.css",
+    "main.js": "/itsabisek.github.io/static/js/main.3ee20c84.js",
+    "static/js/453.8878c98a.chunk.js": "/itsabisek.github.io/static/js/453.8878c98a.chunk.js",
+    "static/media/HackNerdFontPropo-Bold.ttf": "/itsabisek.github.io/static/media/HackNerdFontPropo-Bold.be4d41fb8d8f0fb411f8.ttf",
+    "static/media/HackNerdFontPropo-Regular.ttf": "/itsabisek.github.io/static/media/HackNerdFontPropo-Regular.effeaa289455ff872cf9.ttf",
+    "static/media/photo.jpeg": "/itsabisek.github.io/static/media/photo.014d404d256380bc52a9.jpeg",
+    "static/media/react.png": "/itsabisek.github.io/static/media/react.2f2532db663fd5ec5f95.png",
+    "static/media/redis.png": "/itsabisek.github.io/static/media/redis.6bbbe06cb7427366942b.png",
+    "static/media/mysql.png": "/itsabisek.github.io/static/media/mysql.167c88550478e6f0f85c.png",
+    "static/media/jira.png": "/itsabisek.github.io/static/media/jira.8bd264cec42b5dc2056f.png",
+    "static/media/Abisek-Mishra-Resume-Software-Developer.pdf": "/itsabisek.github.io/static/media/Abisek-Mishra-Resume-Software-Developer.06b2f3583b027baf8f54.pdf",
+    "static/media/gerrit.png": "/itsabisek.github.io/static/media/gerrit.d399eb0be4b7f53285b9.png",
+    "static/media/docker.png": "/itsabisek.github.io/static/media/docker.eb2f578465bab389e141.png",
+    "static/media/linux.png": "/itsabisek.github.io/static/media/linux.52436d320ae393a934a0.png",
+    "static/media/github.png": "/itsabisek.github.io/static/media/github.ba57b0e0a8e0600a63e3.png",
+    "static/media/gcp.png": "/itsabisek.github.io/static/media/gcp.1123aea6b7edb55ec689.png",
+    "static/media/aws.png": "/itsabisek.github.io/static/media/aws.22377c132ffcde5d7b95.png",
+    "static/media/linkedin.png": "/itsabisek.github.io/static/media/linkedin.db34d04ec3a68c9d69aa.png",
+    "static/media/maria.png": "/itsabisek.github.io/static/media/maria.88f4e0c82fb557c718f5.png",
+    "static/media/git.png": "/itsabisek.github.io/static/media/git.dfdd0989ffe0184bdd68.png",
+    "static/media/location.png": "/itsabisek.github.io/static/media/location.d6bf645e442dee577dd4.png",
+    "static/media/impala.png": "/itsabisek.github.io/static/media/impala.bc4294d8c4cabb81db6d.png",
+    "static/media/email.png": "/itsabisek.github.io/static/media/email.a2f2146f929409405da0.png",
+    "static/media/python.png": "/itsabisek.github.io/static/media/python.c038d6e950c57ddc3d03.png",
+    "index.html": "/itsabisek.github.io/index.html",
+    "main.65ec5e80.css.map": "/itsabisek.github.io/static/css/main.65ec5e80.css.map",
+    "main.3ee20c84.js.map": "/itsabisek.github.io/static/js/main.3ee20c84.js.map",
+    "453.8878c98a.chunk.js.map": "/itsabisek.github.io/static/js/453.8878c98a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65ec5e80.css",
+    "static/js/main.3ee20c84.js"
+  ]
+}
