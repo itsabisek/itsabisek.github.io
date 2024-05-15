@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import BackToTop from "./components/BackToTop";
 import Navbar from "./components/Navbar";
 import AboutMe from "./pages/AboutMe";
@@ -7,8 +8,10 @@ import Story from "./pages/Story";
 import Work from "./pages/Work";
 
 function App() {
+  const { ref: body, inView: bodyInView } = useInView({triggerOnce: true});
+
   return (
-    <div className="bg-primaryBg font-sans">
+    <div ref={body} className={`bg-primaryBg font-sans scroll-smooth ${bodyInView ? 'animate-in fade-in-0 duration-700' : 'opacity-0'}`}>
       <Navbar />
       <BackToTop />
       <div className="min-h-screen flex flex-col flex-grow">
