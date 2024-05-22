@@ -21,12 +21,7 @@ import { forwardRef } from "react"
 
 const Skills = () => {
 
-    const {ref: lbox, inView: lboxVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-    const {ref: cbox, inView: cboxVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-    const {ref: tbox, inView: tboxVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-    const {ref: dbox, inView: dboxVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-    const {ref: mbox, inView: mboxVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-
+    const {ref: content, inView: contentVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
     const {ref: divider, inView: dividerVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
     const {ref: titleText, inView: titleTextVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
     
@@ -40,59 +35,39 @@ const Skills = () => {
     ];
 
     return (
-        <div id="Skills" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12">
+        <div id="Skills" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12 bg-primaryBg text-whiteBg min-h-screen">
             <div className="flex overflow-hidden lg:flex-row flex-col lg:h-full w-full justify-start lg:items-center items-start">
-                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisible ? 'animate-in zoom-in-0 duration-500' : 'opacity-0'}`}>
+                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisible ? 'animate-in fade-in-0 duration-100' : 'opacity-0'}`}>
                     <h1 className="text-4xl">what I</h1>
                     <h1 className="text-6xl font-bold">KNOW?</h1>
                 </div>
-                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-secondaryBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-500' : 'opacity-0'}`}></div>
+                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-500' : 'opacity-0'}`}></div>
             </div>
-            <div className="col-span-3 grid lg:grid-cols-2 md:grid-cols-2 gap-4">
-                <div className="grid lg:grid-row-2 gap-4">
-                    <div className="grid lg:grid-cols-2 gap-4">
+            <div ref={content} className={`col-span-3 grid lg:grid-cols-2 md:grid-cols-2 gap-7 ${contentVisible ? `animate-in fade-in-0 duration-1000` : 'opacity-0'}`}>
+                <div className="grid lg:grid-row-2 gap-7">
+                    <div className="grid lg:grid-cols-2 gap-7">
                         <SkillBlock
                             heading={mySkills[0].head}
                             skills={mySkills[0].skills}
-                            ref={lbox}
-                            isVisible={lboxVisible}
-                            delay={0}
-                            direction="top"
                         />
                         <SkillBlock
                             heading={mySkills[2].head}
                             skills={mySkills[2].skills}
-                            ref={cbox}
-                            isVisible={cboxVisible}
-                            delay={75}
-                            direction="top"
                         />
                     </div>
                     <SkillBlock
                         heading={mySkills[1].head}
                         skills={mySkills[1].skills}
-                        ref={tbox}
-                        isVisible={tboxVisible}
-                        delay={75}
-                        direction="bottom"
                     />
                 </div>
-                <div className="grid lg:grid-rows-2 gap-4">
+                <div className="grid lg:grid-rows-2 gap-7">
                     <SkillBlock
                         heading={mySkills[3].head}
                         skills={mySkills[3].skills}
-                        ref={dbox}
-                        isVisible={dboxVisible}
-                        delay={75}
-                        direction="top"
                     />
                     <SkillBlock
                         heading={mySkills[4].head}
                         skills={mySkills[4].skills}
-                        ref={mbox}
-                        isVisible={mboxVisible}
-                        delay={50}
-                        direction="bottom"
                     />
                 </div>
             </div>
@@ -100,18 +75,18 @@ const Skills = () => {
     )
 }
 
-const SkillBlock = forwardRef(({ heading, skills, isVisible, direction, delay = 0 }, ref) => {
+const SkillBlock = ({ heading, skills}) => {
     return (
-        <div ref={ref} className={`p-2 w-full flex flex-col border-2 border-secondaryBg bg-boxBg rounded-3xl ${isVisible ? `animate-in fade-in-0 slide-in-from-${direction}-1/3 duration-1000 delay-${delay}` : 'opacity-0'}`}>
+        <div className={`group p-2 w-full flex flex-col border-2 border-neonBg bg-neonBg hover:bg-whiteBg hover:text-primaryBg hover:scale-110 border-opacity-20 rounded-3xl duration-300`}>
             <div className="flex text-center justify-center">
                 <p className="text-lg font-bold delay-">{heading}</p>
             </div>
-            <div className="mt-2 p-2 grid gap-">
+            <div className="mt-2 p-2 grid">
                 {[...Array(Math.ceil(skills.length / 2))].map((_, rowIndex) => (
                     <div key={rowIndex} className="grid grid-cols-2 gap-2 p-2">
                         {skills.slice(rowIndex * 2, rowIndex * 2 + 2).map((skill, colIndex) => (
                             <div key={colIndex} className="flex items-center">
-                                <img src={skill.logo} className="mr-1 h-8 w-8" alt="logo"></img>
+                                <img src={skill.logo} className="mr-1 h-0 w-0 group-hover:h-6 group-hover:w-6 duration-300" alt="logo"></img>
                                 <p>{skill.name}</p>
                             </div>
                         ))}
@@ -120,6 +95,6 @@ const SkillBlock = forwardRef(({ heading, skills, isVisible, direction, delay = 
             </div>
         </div>
     );
-});
+};
 
 export default Skills;

@@ -1,45 +1,53 @@
 import { useInView } from "react-intersection-observer";
+import shape from '../assets/icons/shape.png';
+import mf from '../assets/icons/mf.png';
+import wipro from '../assets/icons/wipro.svg';
 
 const Work = () => {
 
-    const {ref: box1, inView: box1Visible } = useInView({rootMargin: "-100px", triggerOnce: true});
-    const {ref: box2, inView: box2Visible } = useInView({rootMargin: "-100px", triggerOnce: true});
-    const {ref: box3, inView: box3Visible } = useInView({rootMargin: "-100px", triggerOnce: true});
-
-    const {ref: divider, inView: dividerVisible } = useInView({rootMargin: "-100px", triggerOnce: true})
-    const {ref: titleText, inView: titleTextVisble } = useInView({rootMargin: "-100px", triggerOnce: true})
-
-    // Define your work experiences
-    const workExperiences = [
-        { key: 1, desg: "Software Developer", organization: "Shape Technical Consulting", year: "Jan 2023 - Sept 2023", experience: ["Developed reusable features for a Web Application built with Flutter and AWS/Python"] },
-        { key: 2, desg: "Software Developer", organization: "Mindfire Solutions", year: "Sept 2019 - July 2022", experience: ["Optimised a leading SEO platform, improving presence of businesses using insights from website data"] },
-        { key: 3, desg: "Test Engineer", organization: "Wipro", year: "May 2018 - Sept 2019", experience: ["Formulated test plans for understanding defects and meet quality standards"] }
-    ];
+    const { ref: content, inView: contentVisible } = useInView({ rootMargin: "-200px", triggerOnce: true });
+    const { ref: divider, inView: dividerVisible } = useInView({ rootMargin: "-200px", triggerOnce: true })
+    const { ref: titleText, inView: titleTextVisble } = useInView({ rootMargin: "-200px", triggerOnce: true })
 
     return (
-        <div id="Work" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12 scroll-mt-16">
+        <div id="Work" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12 bg-primaryBg text-whiteBg min-h-screen">
             <div className="flex overflow-hidden lg:flex-row flex-col lg:h-full w-full justify-start lg:items-center items-start">
-                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisble ? 'animate-in zoom-in-0 duration-1000' : 'opacity-0'}`}>
+                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisble ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
                     <h1 className="text-4xl">what did</h1>
                     <h1 className="text-6xl font-bold">I DO?</h1>
                 </div>
-                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-secondaryBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-1000' : 'opacity-0'}`}></div>
+                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-1000' : 'opacity-0'}`}></div>
             </div>
-            <div className="col-span-3 grid grid-row-3 gap-10">
-                <div ref={box1} className={`flex-col overflow-hidden text-start border-secondaryBg bg-boxBg border-2 rounded-e-3xl p-12 ${box1Visible ? 'animate-in fade-in-0 slide-in-from-top-1/3 duration-1000' : 'opacity-0'}`}>
-                    <p className="text-sm">Software Developer</p>
-                    <p className="text-lg font-bold mb-2">Shape Technical Consulting</p>
-                    <p>Developed reusable features for a Web Application built with Flutter and AWS/Python</p>
+            <div ref={content} className={`col-span-3 grid grid-row-3 gap-10 ${contentVisible ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
+                <div className={`hover:bg-whiteBg hover:text-primaryBg hover:scale-110 duration-300 delay-0 group flex-col overflow-hidden text-start border-neonBg bg-neonBg border-2 rounded-e-3xl p-12`}>
+                    <div className="flex items-start justify-start">
+                        <img src={shape} className="mr-1 h-0 w-0 group-hover:h-10 group-hover:w-10 duration-300" alt="logo"></img>
+                        <div className="flex flex-col items-start">
+                            <p className="text-sm">Software Developer</p>
+                            <p className="text-lg font-bold mb-2">Shape Technical Consulting</p>
+                        </div>
+                    </div>
+                    <p>Gained some usefull dart skills while developing features for a Web Application built with Flutter, Amazon Web Services and Python. </p>
                 </div>
-                <div ref={box2} className={`flex-col overflow-hidden text-start border-2 border-secondaryBg bg-boxBg rounded-e-3xl p-12 ${box2Visible ? 'animate-in fade-in-0 slide-in-from-top-1/3 duration-1000 delay-75' : 'opacity-0'}`}>
-                    <p className="text-sm">Software Developer</p>
-                    <p className="text-lg font-bold mb-2">Mindfire Solutions</p>
-                    <p className="text-base">Optimised a leading SEO platform, improving presence of businesses using insights from website data</p>
+                <div className={`hover:bg-whiteBg hover:text-primaryBg hover:scale-110 duration-300 group flex-col overflow-hidden text-start border-2 border-neonBg bg-neonBg rounded-e-3xl p-12`}>
+                <div className="flex items-start justify-start">
+                        <img src={mf} className="mr-1 h-0 w-0 group-hover:h-10 group-hover:w-10 duration-300" alt="logo"></img>
+                        <div className="flex flex-col items-start">
+                            <p className="text-sm">Software Developer</p>
+                            <p className="text-lg font-bold mb-2">Mindfire Solutions</p>
+                        </div>
+                    </div>
+                    <p className="text-base">Improved Search Engine ranks for businesses using insights aggregated from massive amounts of website data using Python, Google Cloud Platform and MySQL; all distributed using microservices.</p>
                 </div>
-                <div ref={box3} className={`overflow-hidden text-start flex-col border-2 border-secondaryBg bg-boxBg rounded-e-3xl p-12 ${box3Visible ? 'animate-in fade-in-0 slide-in-from-top-1/3 duration-1000 delay-150' : 'opacity-0'}`}>
-                    <p className="text-sm">Test Engineer</p>
-                    <p className="text-lg font-bold mb-2">Wipro</p>
-                    <p>Formulated test plans for understanding defects and meet quality standards</p>
+                <div className={`hover:bg-whiteBg hover:text-primaryBg hover:scale-110 duration-300 group overflow-hidden text-start flex-col border-2 border-neonBg bg-neonBg rounded-e-3xl p-12`}>
+                <div className="flex items-start justify-start">
+                        <img src={wipro} className="mr-1 h-0 w-0 group-hover:h-10 group-hover:w-10 duration-300" alt="logo"></img>
+                        <div className="flex flex-col items-start">
+                            <p className="text-sm">Software Developer in Test</p>
+                            <p className="text-lg font-bold mb-2">Wipro</p>
+                        </div>
+                    </div>
+                    <p>Formulated test plans and executed test cases for detecting, understanding and reporting defects and meet quality standards for incremental updates of a global product with several end-users.</p>
                 </div>
             </div>
         </div>

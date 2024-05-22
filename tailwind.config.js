@@ -12,12 +12,15 @@ module.exports = {
       },
     },
     colors: {
-      'primaryBg': '#c5d8d1',
-      'secondaryBg': '#f45b69',
-      'boxBg': '#ffffee'
+      'primaryBg': '#2b2d32',
+      'secondaryBg': '#e45d36',
+      'greyBg': '#414452',
+      'neonBg': '#498b54',
+      'whiteBg': '#ffffee'
+
     },
     fontFamily: {
-      hack: ["Hack"]
+      hack: ["Hack"],
     },
   },
   plugins: [require("tailwindcss-animate"),],

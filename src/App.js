@@ -11,9 +11,9 @@ function App() {
   const { ref: body, inView: bodyInView } = useInView({triggerOnce: true});
 
   return (
-    <div ref={body} className={`bg-primaryBg font-sans scroll-smooth ${bodyInView ? 'animate-in fade-in-0 duration-700' : 'opacity-0'}`}>
+    <div ref={body} className={`font-sans scroll-smooth ${bodyInView ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
       <Navbar />
-      <BackToTop />
+      <BackToTop />  
       <div className="min-h-screen flex flex-col flex-grow">
         <Story />
         <AboutMe />
