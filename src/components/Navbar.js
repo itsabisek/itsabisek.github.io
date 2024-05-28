@@ -39,7 +39,7 @@ const Navbar = () => {
     ]
 
     return (
-        <nav ref={nav} className={`text-whiteBg sticky top-0 z-50 left-0 w-full ${isScroll ? 'transition duration-300 shadow-md' : 'transition duration-300 shadow-none'} ${navVisible ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'} bg-greyBg`}>
+        <nav ref={nav} className={`text-whiteBg fixed top-0 z-40 left-0 w-full ${isScroll ? 'transition duration-300 shadow-md' : 'transition duration-300 shadow-none'} ${navVisible ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'} bg-greyBg`}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
@@ -47,7 +47,7 @@ const Navbar = () => {
                             ABISEK
                         </a>
                     </div>
-                    <div className="grid grid-cols-5 justify-between h-auto">
+                    <div className="hidden lg:grid grid-cols-5 justify-between h-auto">
                         {links.map(({ id, link }) => (
                             <a href={`#${link}`} className="group relative flex group-hover:text-neonBg p-1 justify-center items-center">
                                 <p>{link}</p>

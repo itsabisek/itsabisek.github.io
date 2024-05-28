@@ -17,7 +17,6 @@ import confluence from "../assets/icons/confluence.png"
 import git from "../assets/icons/git.png"
 import gerrit from "../assets/icons/gerrit.png"
 import { useInView } from "react-intersection-observer"
-import { forwardRef } from "react"
 
 const Skills = () => {
 

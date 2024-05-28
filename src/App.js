@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import Story from "./pages/Story";
 import Work from "./pages/Work";
+import Hamburger from "./components/Hamburger";
 
 function App() {
   const { ref: body, inView: bodyInView } = useInView({triggerOnce: true});
@@ -13,6 +14,7 @@ function App() {
   return (
     <div ref={body} className={`font-sans scroll-smooth ${bodyInView ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
       <Navbar />
+      <Hamburger />
       <BackToTop />  
       <div className="min-h-screen flex flex-col flex-grow">
         <Story />
