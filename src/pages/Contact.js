@@ -5,16 +5,16 @@ import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
 
-    const {ref: content, inView: contentVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-    const {ref: divider, inView: dividerVisible } = useInView({rootMargin: "-200px", triggerOnce: true})
-    const {ref: titleText, inView: titleTextVisble } = useInView({rootMargin: "-200px", triggerOnce: true})
+    const {ref: content, inView: contentVisible } = useInView({threshold: 0.5, triggerOnce: true});
+    const {ref: divider, inView: dividerVisible } = useInView({threshold: 0.5, triggerOnce: true})
+    const {ref: titleText, inView: titleTextVisble } = useInView({threshold: 0.5, triggerOnce: true})
 
     return (
         <div id="Contact" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12 bg-primaryBg text-whiteBg min-h-screen">
             <div className="flex overflow-hidden lg:flex-row flex-col lg:h-full w-full justify-start lg:items-center items-start">
                 <div ref={titleText} className={`abisek-start-text flex-col lg:p-6 p-2 ${titleTextVisble ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
-                    <h1 className="text-4xl">get in</h1>
-                    <h1 className="text-6xl font-bold">TOUCH</h1>
+                    <h1 className="text-2xl lg:text-4xl">get in</h1>
+                    <h1 className="text-4xl lg:text-6xl font-bold">TOUCH</h1>
                 </div>
                 <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg  lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-1000' : 'opacity-0'}`}></div>
             </div>

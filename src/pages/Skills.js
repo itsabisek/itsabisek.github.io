@@ -20,9 +20,9 @@ import { useInView } from "react-intersection-observer"
 
 const Skills = () => {
 
-    const {ref: content, inView: contentVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-    const {ref: divider, inView: dividerVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
-    const {ref: titleText, inView: titleTextVisible } = useInView({rootMargin: "-200px", triggerOnce: true});
+    const {ref: content, inView: contentVisible } = useInView({threshold: 0.5, triggerOnce: true});
+    const {ref: divider, inView: dividerVisible } = useInView({threshold: 0.5, triggerOnce: true});
+    const {ref: titleText, inView: titleTextVisible } = useInView({threshold: 0.5, triggerOnce: true});
     
     // Define your work experiences
     const mySkills = [
@@ -37,12 +37,12 @@ const Skills = () => {
         <div id="Skills" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12 bg-primaryBg text-whiteBg min-h-screen">
             <div className="flex overflow-hidden lg:flex-row flex-col lg:h-full w-full justify-start lg:items-center items-start">
                 <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisible ? 'animate-in fade-in-0 duration-100' : 'opacity-0'}`}>
-                    <h1 className="text-4xl">what I</h1>
-                    <h1 className="text-6xl font-bold">KNOW?</h1>
+                    <h1 className="text-2xl lg:text-4xl">what I</h1>
+                    <h1 className="text-3xl lg:text-6xl font-bold">KNOW?</h1>
                 </div>
-                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-500' : 'opacity-0'}`}></div>
+                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg  lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-1000' : 'opacity-0'}`}></div>
             </div>
-            <div ref={content} className={`col-span-3 grid lg:grid-cols-2 md:grid-cols-2 gap-7 ${contentVisible ? `animate-in fade-in-0 duration-1000` : 'opacity-0'}`}>
+            <div ref={content} className={`lg:col-span-3 grid lg:grid-cols-2 gap-7 ${contentVisible ? `animate-in fade-in-0 duration-1000` : 'opacity-0'}`}>
                 <div className="grid lg:grid-row-2 gap-7">
                     <div className="grid lg:grid-cols-2 gap-7">
                         <SkillBlock
@@ -78,7 +78,7 @@ const SkillBlock = ({ heading, skills}) => {
     return (
         <div className={`group p-2 w-full flex flex-col border-2 border-neonBg bg-neonBg hover:bg-whiteBg hover:text-primaryBg hover:scale-110 border-opacity-20 rounded-3xl duration-300`}>
             <div className="flex text-center justify-center">
-                <p className="text-lg font-bold delay-">{heading}</p>
+                <p className="text-lg font-bold">{heading}</p>
             </div>
             <div className="mt-2 p-2 grid">
                 {[...Array(Math.ceil(skills.length / 2))].map((_, rowIndex) => (
