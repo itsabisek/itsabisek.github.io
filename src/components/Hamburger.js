@@ -8,9 +8,9 @@ const Hamburger = () => {
     const [isHamOpen, setisHamOpen] = useState(false);
 
     return (
-        <div className={`lg:hidden fixed flex flex-col z-50 top-0 right-0 text-whiteBg ${isHamOpen ? 'bg-primaryBg duration-500' : 'duration-500'}`}>
+        <div className={`lg:hidden fixed flex flex-col z-50 top-0 right-0 text-whiteBg ${isHamOpen ? 'bg-primaryBg duration-500' : 'duration-500'}`} onClick={() => setisHamOpen((isHamOpen) => !isHamOpen)}>
             <div className="flex justify-end items-center">
-                <img src={isHamOpen ? cross : ham} className={`${isHamOpen ? 'h-12 w-12' : 'h-10 w-10'} mt-4 mr-4  animate-in duration-500 zoom-in-0`} alt="ham" onClick={() => setisHamOpen((isHamOpen) => !isHamOpen)}></img>
+                <img src={isHamOpen ? cross : ham} className={`${isHamOpen ? 'h-12 w-12' : 'h-10 w-10'} mt-4 mr-4  animate-in duration-500 zoom-in-0`} alt="ham"></img>
             </div>
             <ExpandList
                 isHamOpen={isHamOpen}
