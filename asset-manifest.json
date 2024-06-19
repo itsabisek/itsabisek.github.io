@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0febc334.css",
-    "main.js": "/static/js/main.ddb475a0.js",
+    "main.css": "/static/css/main.049393d4.css",
+    "main.js": "/static/js/main.05e88952.js",
     "static/js/453.8878c98a.chunk.js": "/static/js/453.8878c98a.chunk.js",
     "static/media/HackNerdFontPropo-Bold.ttf": "/static/media/HackNerdFontPropo-Bold.be4d41fb8d8f0fb411f8.ttf",
     "static/media/HackNerdFontPropo-Regular.ttf": "/static/media/HackNerdFontPropo-Regular.effeaa289455ff872cf9.ttf",
@@ -25,12 +25,12 @@
     "static/media/email.png": "/static/media/email.a2f2146f929409405da0.png",
     "static/media/python.png": "/static/media/python.c038d6e950c57ddc3d03.png",
     "index.html": "/index.html",
-    "main.0febc334.css.map": "/static/css/main.0febc334.css.map",
-    "main.ddb475a0.js.map": "/static/js/main.ddb475a0.js.map",
+    "main.049393d4.css.map": "/static/css/main.049393d4.css.map",
+    "main.05e88952.js.map": "/static/js/main.05e88952.js.map",
     "453.8878c98a.chunk.js.map": "/static/js/453.8878c98a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0febc334.css",
-    "static/js/main.ddb475a0.js"
+    "static/css/main.049393d4.css",
+    "static/js/main.05e88952.js"
   ]
 }
