@@ -19,13 +19,13 @@ const Contact = () => {
                 </div>
                 <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg  lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 lg:duration-1000' : 'opacity-0'}`}></div>
             </div>
-            <div ref={content} className={`grid grid-cols-3 lg:grid-cols-1 lg:grid-rows-3 gap-10 ${contentVisible ? 'lganimate-in fade-in-0 lg:duration-1000' : 'opacity-0'} `}>
+            <div ref={content} className={`grid lg:grid-cols-1 lg:grid-rows-3 gap-10 ${contentVisible ? 'animate-in fade-in-0 lg:duration-1000' : 'opacity-0'} `}>
                 <a href="https://maps.app.goo.gl/LNnWfG3R5898BhnT7" target="_blank" rel="noopener noreferrer">
                     <div className={`group flex-col overflow-hidden text-center border-2 border-neonBg bg-neonBg hover:bg-whiteBg hover:text-primaryBg rounded-3xl p-10 transform hover:scale-110 duration-300`}>
                         <div className="flex justify-center mb-4">
                             <img src={location} className="h-12 w-12 group-hover:scale-150 duration-300" alt="email"></img>
                         </div>
-                        <p className="hidden lg:block">London, United Kingdom</p>
+                        <p>London, United Kingdom</p>
                     </div>
                 </a>
                 <a href="mailto:abisekmishra2@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@ const Contact = () => {
                         <div className="flex justify-center mb-4">
                             <img src={email} className="h-12 w-12 group-hover:scale-150 duration-300" alt="email"></img>
                         </div>
-                        <p className="hidden lg:block">abisekmishra2@gmail.com</p>
+                        <p>abisekmishra2@gmail.com</p>
                     </div>
                 </a>
                 <a href="https://www.linkedin.com/in/abisekmishra" target="_blank" rel="noopener noreferrer">
@@ -41,11 +41,11 @@ const Contact = () => {
                         <div className="flex justify-center mb-4">
                             <img src={linkedin} className="h-12 w-12 group-hover:scale-150 duration-300" alt="email"></img>
                         </div>
-                        <p className="hidden lg:block">Abisek Mishra</p>
+                        <p>Abisek Mishra</p>
                     </div>
                 </a>
             </div>
-                <div className="lg:col-span-2 justify-center items-center w-full">
+                <div ref={content} className={`lg:col-span-2 justify-center items-center w-full ${contentVisible ? 'animate-in fade-in-0 lg:duration-1000' : 'opacity-0'}`}>
                     <EmailComponent />
                 </div>
         </div>

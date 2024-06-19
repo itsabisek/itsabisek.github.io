@@ -9,13 +9,13 @@ const AboutMe = () => {
     return (
         <div id="About" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12 bg-primaryBg text-whiteBg min-h-screen">
             <div className="flex overflow-hidden lg:flex-row flex-col lg:h-full w-full justify-start lg:items-center items-start">
-                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisble ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
+                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisble ? 'animate-in fade-in-0 lg:duration-1000' : 'opacity-0'}`}>
                     <h1 className="text-2xl lg:text-4xl">who</h1>
                     <h1 className="text-3xl lg:text-6xl font-bold">AM I?</h1>
                 </div>
-                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-1000' : 'opacity-0'}`}></div>
+                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 lg:duration-1000' : 'opacity-0'}`}></div>
             </div>
-            <div ref={content} className={`lg:col-span-3 grid lg:grid-rows-3 gap-8 justify-center items-center ${contentVisible ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
+            <div ref={content} className={`lg:col-span-3 grid lg:grid-rows-3 gap-8 justify-center items-center ${contentVisible ? 'animate-in fade-in-0 lg:duration-1000' : 'opacity-0'}`}>
                 <div className="grid lg:grid-cols-3 items-center gap-6 ">
                     <div className={`group hover:scale-110 duration-300 overflow-hidden flex flex-col justify-center items-center h-full w-full text-center border-2 border-neonBg bg-neonBg hover:bg-whiteBg rounded-3xl p-4`}>
                         <div className="absolute opacity-100 group-hover:opacity-0 group-hover:duration-75 duration-300">

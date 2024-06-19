@@ -12,13 +12,13 @@ const Work = () => {
     return (
         <div id="Work" className="grid lg:grid-cols-4 gap-10 lg:justify-around items-center lg:p-44 p-12 bg-primaryBg text-whiteBg min-h-screen">
             <div className="flex overflow-hidden lg:flex-row flex-col lg:h-full w-full justify-start lg:items-center items-start">
-                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisble ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
+                <div ref={titleText} className={`flex-col lg:p-6 p-2 ${titleTextVisble ? 'animate-in fade-in-0 lg:duration-1000' : 'opacity-0'}`}>
                     <h1 className="text-2xl lg:text-4xl">what did</h1>
                     <h1 className="text-3xl lg:text-6xl font-bold">I DO?</h1>
                 </div>
-                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 duration-1000' : 'opacity-0'}`}></div>
+                <div ref={divider} className={`lg:w-0 lg:h-full w-full lg:border-r border-t border-neonBg lg:mx-8 my-4 ${dividerVisible ? 'animate-in zoom-in-0 lg:duration-1000' : 'opacity-0'}`}></div>
             </div>
-            <div ref={content} className={`lg:col-span-3 grid grid-row-3 gap-10 ${contentVisible ? 'animate-in fade-in-0 duration-1000' : 'opacity-0'}`}>
+            <div ref={content} className={`lg:col-span-3 grid grid-row-3 gap-10 ${contentVisible ? 'animate-in fade-in-0 lg:duration-1000' : 'opacity-0'}`}>
                 <div className={`hover:bg-whiteBg hover:text-primaryBg hover:scale-110 duration-300 delay-0 group flex-col overflow-hidden text-start border-neonBg bg-neonBg border-2 rounded-3xl p-12`}>
                     <div className="flex items-start justify-start">
                         <img src={shape} className="mr-1 h-0 w-0 group-hover:h-10 group-hover:w-10 duration-300" alt="logo"></img>
