@@ -32,7 +32,7 @@ const WorkExperienceList = () => {
             company: "Reveela",
             position: "Full Stack Software Engineer",
             logo: reveela,
-            description: "Cannot wait to make a difference in AI assissted digital content publishing and marketing, starting this year"
+            description: "Trying to make a difference with AI assisted digital content publishing and marketing, one article at a time"
         },
         {
             company: "Shape Technical Consulting",
